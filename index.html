@@ -12,23 +12,51 @@
 </head>
 
 <body>
-  <section id="nav">
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Site</label>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="detalhes.html">Detalhes</a></li>
       <li><a href="forecast.html">Forecast</a></li>
       <li><a href="favoritos.html">Favoritos</a></li>
       <li><a href="#" class="theme">Dark Mode</a></li>
-    </ul>
-  </section>
+        <input type="text" id="cidade" placeholder="Cidade">
+        <button type="submit" id="submit">Pesquisar</button>
+    </ul>    
+  </nav>
+  
     <div class="tempo">
-      <form id="form">
-      <input type="search" class="procurar" placeholder="Procurar Cidade">
-      </form>
       <div class="inicio">
         <div class="detalhes"></div>
             <h2 class="cidade">Cidade</h2>
-            <p class="dia">Dia</p>
+            <p class="dia">Olá :user:!</p>
+
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="text.com.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="text.com.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="text.com.png" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
             <div class="tempo_atual">
                 <p class="humidade"><span class="value">50</span>%</p>
                 <p class="vento"><span class="value">15</span>km/h</p>
@@ -37,35 +65,72 @@
         <img src="" alt="" class="imagem_tempo">
         <div class="temperatura"><span class="value">+25</span> &deg;C</div>
       </div>
+
+
       <div class="forecast"></div>
-          <article class="forecast_tempo">
+          <article class="forecast_Leiria">
               <img src="image" alt="" class="">
-              <h3 class="forecast_dia">Dia</h3>
+              <h3 class="forecast_dia">Leiria</h3>
               <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
           </article>
-          <article class="forecast_tempo">
+          <article class="forecast_Porto">
             <img src="image" alt="" class="">
-            <h3 class="forecast_dia">Dia</h3>
+            <h3 class="forecast_dia">Porto</h3>
             <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
           </article>
-          <article class="forecast_tempo">
+          <article class="forecast_Faro">
           <img src="image" alt="" class="">
-          <h3 class="forecast_dia">Dia</h3>
+          <h3 class="forecast_dia">Faro</h3>
           <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
           </article>
-          <article class="forecast_tempo">
+          <article class="forecast_Lisboa">
             <img src="image" alt="" class="">
-            <h3 class="forecast_dia">Dia</h3>
+            <h3 class="forecast_dia">Lisboa</h3>
             <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
           </article>
-          <article class="forecast_tempo">
+          <article class="forecast_Braga">
             <img src="image" alt="" class="">
-            <h3 class="forecast_dia">Dia</h3>
+            <h3 class="forecast_dia">Braga</h3>
             <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
           </article>
     </div>
 
     <script src="app.js"></script>
+
+    <footer>
+      <div class="main-content">
+        <div class="left box">
+          <h2>Sobre nós</h2>
+          <div class="content">
+            <p>Este Website foi criado no intuido das disciplinas de Programação Web - Client e Introdução à Análise e Projeto de Sistemas de Informação.<br>
+              O projeto foi realizado por: <br>
+              - André Pimenta<br>
+              - Diana Catarino<br>
+              - Diogo Luís <br>
+            </p>
+        </div>  
+        </div>
+
+        <div class="right box">
+          <h2>Suporte</h2>
+          <div class="content">
+            <form action="#">
+              <div class="email">
+                <div class="text">Email *</div>
+                <input type="email" required>
+              </div>
+              <div class="msg">
+                <div class="text">Message *</div>
+                <textarea rows="2" cols="25" required></textarea>
+              </div>
+              <div class="btn">
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 </body>
 </html>

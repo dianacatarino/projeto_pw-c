@@ -24,3 +24,9 @@ function setTime() {
   // console.log(Hours + ":" + Minutes);
   Time.html(Hours + ":" + Minutes + ":" + Seconds );
 }
+
+function calculateDaysBetweenDates(begin, end) {
+  var oneDay = 24 * 60 * 60 * 1000;
+  var diffDays = Math.round(Math.abs((begin - end) / oneDay));
+  return diffDays;
+}
