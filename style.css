@@ -47,19 +47,28 @@ body {
     align-self: center;
 }
 
-.cidade{
+.title{
     font-size: 36px;
     font-weight: 600;
     margin: 20px 0;
+    color: white;
 }
 
 .dia{
     font-size: 30px;
     margin: 10px 0;
+    color: white;
 }
 
 .forecast{
     font-size: 30px;
+}
+
+#cityName{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: white;
 }
 
 .light-theme {
@@ -71,7 +80,7 @@ body {
 }
   
 .dark-theme {
-    /* --bg: #272727; */
+    --bg: #272727;
     --bg: #000;
     --img: linear-gradient(180deg, #2c3e50 10%, #000 74%);
     --color: #fff;
@@ -188,7 +197,7 @@ body {
 *{
   margin: 0;
   padding: 0;
-  color: #d9d9d9;
+  color: #383737;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
@@ -208,13 +217,16 @@ body {
   font-weight: 600;
   color: #202020;
 }
+
 #footer {
+  display: flex;
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 60px; 
   background: rgb(0, 0, 0);
 }
+
 .main-content{
   display: flex;
 }
@@ -254,7 +266,7 @@ body {
 .right form .text{
   font-size: 1.0625rem;
   margin-bottom: 2px;
-  color: #656565;
+  color: #fbfbfb;
 }
 .right form .msg{
   margin-top: 10px;
@@ -329,7 +341,6 @@ article {
 }
 
 .forecast_Porto {
-  
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
@@ -339,7 +350,6 @@ article {
 }
 
 .forecast_Leiria {
-  
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
@@ -349,17 +359,6 @@ article {
 }
 
 .forecast_Faro {
-  
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 20px;
-  width: 275px;
-  float: left;
-}
-
-.forecast_Lisboa {
-  
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
@@ -369,11 +368,69 @@ article {
 }
 
 .forecast_Braga {
-  
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
   width: 275px;
   float: left;
+}
+
+.forecast_Lisboa {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 275px;
+  float: left;
+}
+
+.dia1 {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 220px;
+  float: left;
+  text-align: center;
+}
+
+.dia2 {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 220px;
+  float: left;
+  text-align: center;
+}
+
+.dia3 {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 220px;
+  float: left;
+  text-align: center;
+}
+
+.dia4 {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 220px;
+  float: left;
+  text-align: center;
+}
+
+.dia5 {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 220px;
+  float: left;
+  text-align: center;
 }
