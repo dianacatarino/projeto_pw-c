@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=16e9f5fc4cdfb21605bdee8fe57b7ea2"></script>
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Site</label>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="detalhes.html">Detalhes</a></li>
+      <li><a href="forecast.html">Forecast</a></li>
+      <li><a href="favoritos.html">Favoritos</a></li>
+      <li><a href="#" class="theme">Dark Mode</a></li>
+        <input type="text" id="cidade" placeholder="Cidade">
+        <button type="submit" id="submit">Pesquisar</button>
+    </ul>    
+  </nav>
+  
+    <div class="tempo">
+      <div class="inicio">
+        <div class="detalhes"></div>
+            <h2 class="title">Cidade</h2>
+            <p class="dia">Dia</p>
+            <div class="tempo_atual">
+                <p class="humidade"><span class="value">50</span>%</p>
+                <p class="vento"><span class="value">15</span>km/h</p>
+                <p class="pressão"><span class="value">1050</span>hpa</p>
+            </div>
+        <img src="" alt="" class="imagem_tempo">
+        <div class="temperatura"><span class="value">+25</span> &deg;C</div>
+      </div>
+      <div class="forecast"></div>
+          <article class="forecast_tempo">
+              <img src="image" alt="" class="">
+              <h3 class="forecast_dia">Dia</h3>
+              <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
+          </article>
+          <article class="forecast_tempo">
+            <img src="image" alt="" class="">
+            <h3 class="forecast_dia">Dia</h3>
+            <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
+          </article>
+          <article class="forecast_tempo">
+          <img src="image" alt="" class="">
+          <h3 class="forecast_dia">Dia</h3>
+          <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
+          </article>
+          <article class="forecast_tempo">
+            <img src="image" alt="" class="">
+            <h3 class="forecast_dia">Dia</h3>
+            <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
+          </article>
+          <article class="forecast_tempo">
+            <img src="image" alt="" class="">
+            <h3 class="forecast_dia">Dia</h3>
+            <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
+          </article>
+    </div>
+
+    <script src="app.js"></script>
+
+    <footer>
+      <div class="main-content">
+        <div class="left box">
+          <h2>Sobre nós</h2>
+          <div class="content">
+            <p>Este Website foi criado no intuido das disciplinas de Programação Web - Client e Introdução à Análise e Projeto de Sistemas de Informação.<br>
+              O projeto foi realizado por: <br>
+              - André Pimenta<br>
+              - Diana Catarino<br>
+              - Diogo Luís <br>
+            </p>
+        </div>  
+        </div>
+
+        <div class="right box">
+          <h2>Suporte</h2>
+          <div class="content">
+            <form action="#">
+              <div class="email">
+                <div class="text">Email *</div>
+                <input type="email" required>
+              </div>
+              <div class="msg">
+                <div class="text">Message *</div>
+                <textarea rows="2" cols="25" required></textarea>
+              </div>
+              <div class="btn">
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>
