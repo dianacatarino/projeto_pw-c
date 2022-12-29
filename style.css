@@ -82,6 +82,12 @@ p, h2, h3, .value, .temperatura, textarea{
   
     --color: #000;
 }
+
+form{
+  width: 300px;
+  margin: 200px auto;
+  text-align: center;
+}
   
 .dark-theme {
     --bg: #272727;
@@ -349,8 +355,10 @@ article {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 275px;
+  width: 180px;
   float: left;
+  text-align: center;
+  text-size-adjust: 50%;
 }
 
 .forecast_Leiria {
@@ -358,8 +366,9 @@ article {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 275px;
+  width: 180px;
   float: left;
+  text-align: center;
 }
 
 .forecast_Faro {
@@ -367,8 +376,9 @@ article {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 275px;
+  width: 180px;
   float: left;
+  text-align: center;
 }
 
 .forecast_Braga {
@@ -376,8 +386,9 @@ article {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 275px;
+  width: 180px;
   float: left;
+  text-align: center;
 }
 
 .forecast_Lisboa {
@@ -385,8 +396,79 @@ article {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 275px;
+  width: 180px;
   float: left;
+  text-align: center;
+}
+
+.forecast_Santarem {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 180px;
+  float: left;
+  text-align: center;
+}
+
+.detalhes_Leiria{
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  float: left;
+  text-align: center;
+}
+
+.detalhes_Porto{
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  float: left;
+  text-align: center;
+}
+
+.detalhes_Faro{
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  float: left;
+  text-align: center;
+}
+
+.detalhes_Lisboa{
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  float: left;
+  text-align: center;
+}
+
+.detalhes_Braga{
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  float: left;
+  text-align: center;
+}
+
+.detalhes_Santarem{
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  float: left;
+  text-align: center;
 }
 
 .dia1 {
@@ -450,10 +532,10 @@ article {
   background-color: transparent;
   border: none;
   margin: 2px;
-  margin-left: 200px;
+  margin-left: 120px;
   font-size: 12px;
   outline: none;
-  color: black; 
+  color:white;
 }
 
 .btn i:hover{

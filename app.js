@@ -42,7 +42,7 @@ function DefaultScreen(){
 
 //Getting and displaying the text for the upcoming five days of the week
 var d = new Date();
-var weekday = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado",];
+var weekday = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 
 //Function to get the correct integer for the index of the days array
 function CheckDay(day){
@@ -51,12 +51,38 @@ function CheckDay(day){
   }
   else{
       return day + d.getDay();
+    }
   }
-}
 
   for(i = 0; i<5; i++){
       document.getElementById("day" + (i+1)).innerHTML = weekday[CheckDay(i)];
   }
+
+  
+function login(){
+
+    var login = document.getElementById('login').value;
+    var senha = document.getElementById('senha').value;
+
+    if(login == "admin" && senha == "admin"){
+        alert('Sucesso');
+        location.href = "index.html";
+    }else{
+        alert('Utilizador ou senha incorretos');
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
   //------------------------------------------------------------
 
 
