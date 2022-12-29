@@ -14,6 +14,10 @@ body {
     font-size: 22px;
 }
 
+p, h2, h3, .value, .temperatura, textarea{
+  color:white;
+}
+
 .tempo {
     width: 80%;
     height: 100%;
@@ -197,7 +201,7 @@ body {
 *{
   margin: 0;
   padding: 0;
-  color: #383737;
+  color: #151515;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
@@ -433,4 +437,25 @@ article {
   width: 220px;
   float: left;
   text-align: center;
+}
+
+.btns{
+  position: absolute;
+  top: 4px;
+  left: 200px;
+  display: flex;
+}
+
+.btn{
+  background-color: transparent;
+  border: none;
+  margin: 2px;
+  margin-left: 200px;
+  font-size: 12px;
+  outline: none;
+  color: black; 
+}
+
+.btn i:hover{
+  cursor: pointer;
 }

@@ -24,7 +24,7 @@
       <li><a href="forecast.html">Forecast</a></li>
       <li><a href="favoritos.html">Favoritos</a></li>
       <li><a href="#" class="theme">Dark Mode</a></li>
-        <input type="text" id="cityInput" placeholder="Cidade">
+        <input type="text" id="cidade" placeholder="Cidade">
         <button type="button" onclick="GetInfo()">Pesquisar</button>        
     </ul>    
   </nav>
@@ -33,7 +33,7 @@
     <div class="inicio">
       <div class="detalhes"></div>
       <h2 class="title">Forecast 5d/3h</h2>
-      <h2 id="cityName">Leiria</h2>
+      <h2 id="cidadeNome">Leiria</h2>
       <div id = "weatherContainer">
       <article class="dia1">
         <div id="iconsContainer">    
@@ -81,6 +81,41 @@
   </div>
 
     <script src="app.js"></script>
+
+    <footer>
+      <div class="main-content">
+        <div class="left box">
+          <h2>Sobre nós</h2>
+          <div class="content">
+            <p>Este Website foi criado no intuido das disciplinas de Programação Web - Client e Introdução à Análise e Projeto de Sistemas de Informação.<br>
+              O projeto foi realizado por: <br>
+              - André Pimenta<br>
+              - Diana Catarino<br>
+              - Diogo Luís <br>
+            </p>
+        </div>  
+        </div>
+
+        <div class="right box">
+          <h2>Suporte</h2>
+          <div class="content">
+            <form action="#">
+              <div class="email">
+                <div class="text">Email *</div>
+                <input type="email" required>
+              </div>
+              <div class="msg">
+                <div class="text">Mensagem *</div>
+                <textarea rows="2" cols="25" required></textarea>
+              </div>
+              <div class="btn">
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 </body>
 </html>

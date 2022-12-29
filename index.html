@@ -58,42 +58,61 @@
             </div>
 
             <div class="tempo_atual">
-                <p class="humidade"><span class="value">50</span>%</p>
-                <p class="vento"><span class="value">15</span>km/h</p>
-                <p class="pressão"><span class="value">1050</span>hpa</p>
             </div>
         <img src="" alt="" class="imagem_tempo">
-        <div class="temperatura"><span class="value">+25</span> &deg;C</div>
+        <div class="temperatura"></div>
       </div>
 
 
       <div class="forecast"></div>
           <article class="forecast_Leiria">
+              <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
               <img src="image" alt="" class="">
               <h3 class="forecast_dia">Leiria</h3>
               <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
           </article>
           <article class="forecast_Porto">
+            <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
             <img src="image" alt="" class="">
             <h3 class="forecast_dia">Porto</h3>
             <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
           </article>
           <article class="forecast_Faro">
+            <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
           <img src="image" alt="" class="">
           <h3 class="forecast_dia">Faro</h3>
           <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
           </article>
           <article class="forecast_Lisboa">
+            <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
             <img src="image" alt="" class="">
             <h3 class="forecast_dia">Lisboa</h3>
             <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
           </article>
           <article class="forecast_Braga">
+            <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
             <img src="image" alt="" class="">
             <h3 class="forecast_dia">Braga</h3>
             <p class="forecast_tempo"><span class="value">+25</span> &deg;C</p>
           </article>
     </div>
+
+    <p></p>
+
+    <script>
+
+      var btnvar1 = document.getElementById('btnh1');
+
+      function Toggle1(){
+              if (btnvar1.style.color == "red") {
+                  btnvar1.style.color = "black"
+              }
+              else{
+                  btnvar1.style.color ="red"
+              }
+      }
+
+    </script>
 
     <script src="app.js"></script>
 

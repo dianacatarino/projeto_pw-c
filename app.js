@@ -1,7 +1,7 @@
 function GetInfo() {
 
-  var newName = document.getElementById("cityInput");
-  var cityName = document.getElementById("cityName");
+  var newName = document.getElementById("cidade");
+  var cityName = document.getElementById("cidadeNome");
   cityName.innerHTML = ""+newName.value+"";
 
 fetch('https://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appid=16e9f5fc4cdfb21605bdee8fe57b7ea2')
@@ -35,7 +35,7 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appi
 }
 
 function DefaultScreen(){
-  document.getElementById("cityInput").defaultValue = "Cidade";
+  document.getElementById("cidade").defaultValue = "Cidade";
   GetInfo();
 }
 
