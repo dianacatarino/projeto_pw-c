@@ -14,7 +14,7 @@ body {
     font-size: 22px;
 }
 
-p, h2, h3, .value, .temperatura, textarea{
+p, h2, h3, .value, .temperatura, textarea,i {
   color:white;
 }
 
@@ -81,12 +81,6 @@ p, h2, h3, .value, .temperatura, textarea{
     --img: linear-gradient(320deg, #85a3ce 0%, #f5dadf 74%);
   
     --color: #000;
-}
-
-form{
-  width: 300px;
-  margin: 200px auto;
-  text-align: center;
 }
   
 .dark-theme {
@@ -355,10 +349,9 @@ article {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 180px;
+  width: 300px;
   float: left;
   text-align: center;
-  text-size-adjust: 50%;
 }
 
 .forecast_Leiria {
@@ -366,7 +359,7 @@ article {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 180px;
+  width: 300px;
   float: left;
   text-align: center;
 }
@@ -376,7 +369,7 @@ article {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 180px;
+  width: 300px;
   float: left;
   text-align: center;
 }
@@ -386,7 +379,7 @@ article {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 180px;
+  width: 300px;
   float: left;
   text-align: center;
 }
@@ -396,7 +389,7 @@ article {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 180px;
+  width: 300px;
   float: left;
   text-align: center;
 }
@@ -406,7 +399,7 @@ article {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
-  width: 180px;
+  width: 300px;
   float: left;
   text-align: center;
 }
@@ -532,7 +525,7 @@ article {
   background-color: transparent;
   border: none;
   margin: 2px;
-  margin-left: 120px;
+  margin-left: 200px;
   font-size: 12px;
   outline: none;
   color:white;
@@ -540,4 +533,10 @@ article {
 
 .btn i:hover{
   cursor: pointer;
+}
+
+.carousel-item{
+  text-align: center;
+  height: 300px !important;
+  display: inline-block;
 }

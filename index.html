@@ -37,16 +37,87 @@
             <h2 class="title">Cidade</h2>
             <p class="dia">Olá :user:!</p>
 
+            <div class="forecast"></div>
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="text.com.png" class="d-block w-100" alt="...">
+                  <article class="forecast_Leiria">
+                    <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
+                    <div id="iconsContainer">    
+                        <div class = "icons">    
+                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Leiria</h3>
+                            <p class="weather" id="day1"></p>
+                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                            <p class="maxValues" id="day1Max">Loading...</p>
+                        </div>
+                      </div>
+                  </article>
                 </div>
                 <div class="carousel-item">
-                  <img src="text.com.png" class="d-block w-100" alt="...">
+                  <article class="forecast_Porto">
+                    <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
+                    <div id="iconsContainer">    
+                        <div class = "icons">    
+                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Porto</h3>
+                            <p class="weather" id="day1"></p>
+                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                            <p class="maxValues" id="day1Max">Loading...</p>
+                        </div>
+                      </div>
+                  </article>
                 </div>
                 <div class="carousel-item">
-                  <img src="text.com.png" class="d-block w-100" alt="...">
+                  <article class="forecast_Faro">
+                    <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
+                    <div id="iconsContainer">    
+                        <div class = "icons">    
+                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Faro</h3>
+                            <p class="weather" id="day1"></p>
+                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                            <p class="maxValues" id="day1Max">Loading...</p>
+                        </div>
+                      </div>
+                  </article>
+                </div>
+                <div class="carousel-item">
+                  <article class="forecast_Lisboa">
+                    <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
+                    <div id="iconsContainer">    
+                        <div class = "icons">    
+                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Lisboa</h3>
+                            <p class="weather" id="day1"></p>
+                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                            <p class="maxValues" id="day1Max">Loading...</p>
+                        </div>
+                      </div>
+                  </article>
+                </div>
+                <div class="carousel-item">
+                  <article class="forecast_Braga">
+                    <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
+                    <div id="iconsContainer">    
+                        <div class = "icons">    
+                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Braga</h3>
+                            <p class="weather" id="day1"></p>
+                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                            <p class="maxValues" id="day1Max">Loading...</p>
+                        </div>
+                      </div>
+                  </article>
+                </div>
+                <div class="carousel-item">
+                  <article class="forecast_Santarem">
+                    <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
+                    <div id="iconsContainer">    
+                        <div class = "icons">    
+                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Santarém</h3>
+                            <p class="weather" id="day1"></p>
+                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                            <p class="maxValues" id="day1Max">Loading...</p>
+                        </div>
+                      </div>
+                  </article>
+                </div>
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -58,76 +129,7 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-      
-      <div> </div>
 
-      <div class="forecast"></div>
-          <article class="forecast_Leiria">
-              <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
-              <div id="iconsContainer">    
-                <div class = "icons">    
-                    <h3 id="cidade, cidadeNome" onload="GetInfo()">Leiria</h3>
-                    <p class="weather" id="day1"></p>
-                    <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                    <p class="maxValues" id="day1Max">Loading...</p>
-                </div>
-              </div>
-          </article>
-          <article class="forecast_Porto">
-            <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
-            <div id="iconsContainer">    
-                <div class = "icons">    
-                    <h3 id="cidade, cidadeNome" onload="GetInfo()">Porto</h3>
-                    <p class="weather" id="day1"></p>
-                    <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                    <p class="maxValues" id="day1Max">Loading...</p>
-                </div>
-              </div>
-          </article>
-          <article class="forecast_Faro">
-            <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
-            <div id="iconsContainer">    
-                <div class = "icons">    
-                    <h3 id="cidade, cidadeNome" onload="GetInfo()">Faro</h3>
-                    <p class="weather" id="day1"></p>
-                    <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                    <p class="maxValues" id="day1Max">Loading...</p>
-                </div>
-              </div>
-          </article>
-          <article class="forecast_Lisboa">
-            <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
-            <div id="iconsContainer">    
-                <div class = "icons">    
-                    <h3 id="cidade, cidadeNome" onload="GetInfo()">Lisboa</h3>
-                    <p class="weather" id="day1"></p>
-                    <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                    <p class="maxValues" id="day1Max">Loading...</p>
-                </div>
-              </div>
-          </article>
-          <article class="forecast_Braga">
-            <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
-            <div id="iconsContainer">    
-                <div class = "icons">    
-                    <h3 id="cidade, cidadeNome" onload="GetInfo()">Braga</h3>
-                    <p class="weather" id="day1"></p>
-                    <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                    <p class="maxValues" id="day1Max">Loading...</p>
-                </div>
-              </div>
-          </article>
-          <article class="forecast_Santarem">
-            <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></Button>
-            <div id="iconsContainer">    
-                <div class = "icons">    
-                    <h3 id="cidade, cidadeNome" onload="GetInfo()">Santarém</h3>
-                    <p class="weather" id="day1"></p>
-                    <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                    <p class="maxValues" id="day1Max">Loading...</p>
-                </div>
-              </div>
-          </article>
     </div>
 
     <p></p>
@@ -149,6 +151,41 @@
     </script>
 
     <script src="app.js"></script>
+
+    <footer>
+      <div class="main-content">
+        <div class="left box">
+          <h2>Sobre nós</h2>
+          <div class="content">
+            <p>Este Website foi criado no intuido das disciplinas de Programação Web - Client e Introdução à Análise e Projeto de Sistemas de Informação.<br>
+              O projeto foi realizado por: <br>
+              - André Pimenta<br>
+              - Diana Catarino<br>
+              - Diogo Luís <br>
+            </p>
+        </div>  
+        </div>
+
+        <div class="right box">
+          <h2>Suporte</h2>
+          <div class="content">
+            <form action="#">
+              <div class="email">
+                <div class="text">Email *</div>
+                <input type="email" required>
+              </div>
+              <div class="msg">
+                <div class="text">Mensagem *</div>
+                <textarea rows="2" cols="25" required></textarea>
+              </div>
+              <div class="btn">
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 </body>
 </html>
