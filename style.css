@@ -14,8 +14,17 @@ body {
     font-size: 22px;
 }
 
-p, h2, h3, .value, .temperatura, textarea,i {
+p, h2, h3, .value, .temperatura, textarea,i{
   color:white;
+}
+
+.tempo_atual{
+  text-align: center;
+}
+
+.carousel-item {
+    text-align: center !important;
+    margin: auto;
 }
 
 .tempo {
@@ -342,66 +351,55 @@ article {
   margin: 10px;
   padding: 20px;
   width: 300px;
+  text-align: center !important;
 }
 
 .forecast_Porto {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 20px;
-  width: 300px;
-  float: left;
   text-align: center;
+  height: 220px !important;
+  display: inline-block;
 }
 
 .forecast_Leiria {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 20px;
-  width: 300px;
-  float: left;
   text-align: center;
+  height: 220px !important;
+  display: inline-block;
 }
 
 .forecast_Faro {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 20px;
-  width: 300px;
-  float: left;
   text-align: center;
+  height: 220px !important;
+  display: inline-block;
 }
 
 .forecast_Braga {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 20px;
-  width: 300px;
-  float: left;
   text-align: center;
+  height: 220px !important;
+  display: inline-block;
 }
 
 .forecast_Lisboa {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 20px;
-  width: 300px;
-  float: left;
   text-align: center;
+  height: 220px !important;
+  display: inline-block;
 }
 
 .forecast_Santarem {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 20px;
-  width: 300px;
-  float: left;
   text-align: center;
+  height: 220px !important;
+  display: inline-block;
 }
 
 .detalhes_Leiria{
@@ -514,6 +512,16 @@ article {
   text-align: center;
 }
 
+.favoritos{
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 220px;
+  float: left;
+  text-align: center;
+}
+
 .btns{
   position: absolute;
   top: 4px;
@@ -539,4 +547,11 @@ article {
   text-align: center;
   height: 300px !important;
   display: inline-block;
+}
+
+.carousel-control-next, .carousel-control-prev{
+  background-image: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
 }
