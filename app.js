@@ -1,3 +1,8 @@
+library(httr)
+library(dplyr)
+library(stringr)
+library(jsonlite)
+
 const wrapper = document.querySelector(".wrapper"),
 inputPart = document.querySelector(".input-part"),
 infoTxt = inputPart.querySelector(".info-txt"),
@@ -7,6 +12,7 @@ weatherPart = wrapper.querySelector(".weather-part"),
 wIcon = weatherPart.querySelector("img"),
 arrowBack = wrapper.querySelector("header i");
 let api;
+
 inputField.addEventListener("keyup", e =>{
     if(e.key == "Enter" && inputField.value != ""){
         requestApi(inputField.value);
@@ -113,12 +119,9 @@ function DefaultScreen(){
   GetInfo();
 }
 
-
-//Getting and displaying the text for the upcoming five days of the week
 var d = new Date();
 var weekday = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 
-//Function to get the correct integer for the index of the days array
 function CheckDay(day){
   if(day + d.getDay() > 6){
       return day + d.getDay() - 7;
@@ -132,7 +135,83 @@ function CheckDay(day){
       document.getElementById("day" + (i+1)).innerHTML = weekday[CheckDay(i)];
   }
 
+
+let geocode = {
+    reverseGeocode: function (latitude, longitude) {
+      var apikey = "2cad6041208649f7bacaf9013ad4ec2e";
   
+      var api_url = "https://api.opencagedata.com/geocode/v1/json";
+  
+      var request_url =
+        api_url +
+        "?" +
+        "key=" +
+        apikey +
+        "&q=" +
+        encodeURIComponent(latitude + "," + longitude) +
+        "&pretty=1" +
+        "&no_annotations=1";
+  
+      // see full list of required and optional parameters:
+      // https://opencagedata.com/api#forward
+  
+      var request = new XMLHttpRequest();
+      request.open("GET", request_url, true);
+  
+      request.onload = function () {
+        // see full list of possible response codes:
+        // https://opencagedata.com/api#codes
+  
+        if (request.status == 200) {
+          // Success!
+          var data = JSON.parse(request.responseText);
+          weather.fetchWeather(data.results[0].components.city);
+          console.log(data.results[0].components.city)
+        } else if (request.status <= 500) {
+          // We reached our target server, but it returned an error
+  
+          console.log("unable to geocode! Response code: " + request.status);
+          var data = JSON.parse(request.responseText);
+          console.log("error msg: " + data.status.message);
+        } else {
+          console.log("server error");
+        }
+      };
+  
+      request.onerror = function () {
+        // There was a connection error of some sort
+        console.log("unable to connect to server");
+      };
+  
+      request.send(); // make the request
+    },
+    getLocation: function() {
+      function success (data) {
+        geocode.reverseGeocode(data.coords.latitude, data.coords.longitude);
+      }
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(success, console.error);
+      }
+      else {
+        weather.fetchWeather("Leiria");
+      }
+    }
+};
+
+document.querySelector(".search button").addEventListener("click", function () {
+    weather.search();
+  });
+  
+  document
+    .querySelector(".search-bar")
+    .addEventListener("keyup", function (event) {
+      if (event.key == "Enter") {
+        weather.search();
+      }
+    });
+  
+  geocode.getLocation();
+
 function login(){
 
     var login = document.getElementById('login').value;
@@ -147,15 +226,31 @@ function login(){
 
 }
 
+city_names <- c("Leiria", "Porto", "Faro", "Lisboa", "Braga","Santarém")
+api_id<-'16e9f5fc4cdfb21605bdee8fe57b7ea2'
+main_df<-data.frame()
 
+for (city_name in city_names){
+url<-str_glue("http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={api_id}&q={city_name}")
+main_df<- bind_rows(main_df,get_weather_forecaset_by_cities(url))
+}
 
+get_weather_forecaset_by_cities <- function(url){
+    web_content <- httrGET(url)
+    web_content <- content(web_content,"text")
+    json_data <- fromJSON(web_content, flatten = TRUE)
+    df <- as.data.frame(json_data)
+return(df)
+}
 
-
-
-
-
-
-
+//Favorites function
+function AddToFavorites(){
+    var city = document.getElementById("cidade").value;
+    var fav = document.getElementById("favorites");
+    var option = document.createElement("option");
+    option.text = city;
+    fav.add(option);
+}
 
   //------------------------------------------------------------
 

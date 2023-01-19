@@ -44,10 +44,10 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <article class="forecast_Leiria">
-                    <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+                    <button onclick="Toggle1()" id="btnh1" class="btn" onclick="AddToFavorites()"><i class="fa-regular fa-heart"></i></button>
                     <div id="iconsContainer">    
                         <div class = "icons">    
-                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Leiria</h3>
+                            <h3 id="cidade, cidadeNome" onload="get_weather_forecaset_by_cities()">Leiria</h3>
                             <p class="weather" id="day1"></p>
                             <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
                             <p class="maxValues" id="day1Max">Loading...</p>
