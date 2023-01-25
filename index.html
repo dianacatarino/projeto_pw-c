@@ -18,16 +18,14 @@
     <label for="check" class="checkbtn">
       <i class="fas fa-bars"></i>
     </label>
-    <label class="logo">Site</label>
+    <label class="logo">Weather Projeto</label>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="detalhes.html">Detalhes</a></li>
       <li><a href="forecast.html">Forecast</a></li>
       <li><a href="favoritos.html">Favoritos</a></li>
-      <li><a href="" class="theme">Dark Mode</a></li>
       <li></li><input type="text" id="cidade" placeholder="Cidade">
         <button type="submit" id="submit">Pesquisar</button></li>
-      <li><a href="login.html">Login</a></li>
     </ul>    
   </nav>
   
@@ -36,86 +34,94 @@
       <div class="inicio">
         <div class="detalhes"></div>
             <h2 class="title">Bem-vindo</h2>
-            <p class="dia">Olá :user:!</p>
-            <p class="tempo_atual">Tempo atual</p>
+            <h3 class="tempo_atual">Tempo atual</h3>
+            <div class="location">
+              <h3 class="date">Quarta 22 Julho 2020</h3>
+            </div>
 
             <div class="forecast"></div>
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <article class="forecast_Leiria">
+                  <article class="tempo_Leiria">
                     <button onclick="Toggle1()" id="btnh1" class="btn" onclick="AddToFavorites()"><i class="fa-regular fa-heart"></i></button>
-                    <div id="iconsContainer">    
-                        <div class = "icons">    
-                            <h3 id="cidade, cidadeNome" onload="get_weather_forecaset_by_cities()">Leiria</h3>
-                            <p class="weather" id="day1"></p>
-                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                            <p class="maxValues" id="day1Max">Loading...</p>
+                    <div class="container">
+                      <div class="innerContainer">   
+                            <div>
+                              <h3 id="cidade1"><i class="fa fa-location-arrow"></i>Leiria</h3>
+                              <img id="icon1" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
+                              <p class="temperature.value" style="font-size:xxx-large" >37&#176;C</p>
+                            </div>
                         </div>
                       </div>
                   </article>
                 </div>
                 <div class="carousel-item">
-                  <article class="forecast_Porto">
+                  <article class="tempo_Porto">
                     <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-                    <div id="iconsContainer">    
-                        <div class = "icons">    
-                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Porto</h3>
-                            <p class="weather" id="day1"></p>
-                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                            <p class="maxValues" id="day1Max">Loading...</p>
+                    <div class="container">
+                      <div class="innerContainer">   
+                            <div>
+                              <h3 id="cidade2"><i class="fa fa-location-arrow"></i>Porto</h3>
+                              <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
+                              <p id="temperature2" style="font-size:xxx-large" >37&#176;C</p>
+                            </div>
                         </div>
                       </div>
                   </article>
                 </div>
                 <div class="carousel-item">
-                  <article class="forecast_Faro">
+                  <article class="tempo_Faro">
                     <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-                    <div id="iconsContainer">    
-                        <div class = "icons">    
-                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Faro</h3>
-                            <p class="weather" id="day1"></p>
-                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                            <p class="maxValues" id="day1Max">Loading...</p>
+                    <div class="container">
+                      <div class="innerContainer">   
+                            <div>
+                              <h3 id="cidade2"><i class="fa fa-location-arrow"></i>Faro</h3>
+                              <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
+                              <p id="temperature2" style="font-size:xxx-large" >37&#176;C</p>
+                            </div>
                         </div>
                       </div>
                   </article>
                 </div>
                 <div class="carousel-item">
-                  <article class="forecast_Lisboa">
+                  <article class="tempo_Lisboa">
                     <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-                    <div id="iconsContainer">    
-                        <div class = "icons">    
-                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Lisboa</h3>
-                            <p class="weather" id="day1"></p>
-                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                            <p class="maxValues" id="day1Max">Loading...</p>
+                    <div class="container">
+                      <div class="innerContainer">   
+                            <div>
+                              <h3 id="cidade2"><i class="fa fa-location-arrow"></i>Lisboa</h3>
+                              <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
+                              <p id="temperature2" style="font-size:xxx-large" >37&#176;C</p>
+                            </div>
                         </div>
                       </div>
                   </article>
                 </div>
                 <div class="carousel-item">
-                  <article class="forecast_Braga">
+                  <article class="tempo_Braga">
                     <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-                    <div id="iconsContainer">    
-                        <div class = "icons">    
-                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Braga</h3>
-                            <p class="weather" id="day1"></p>
-                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                            <p class="maxValues" id="day1Max">Loading...</p>
+                    <div class="container">
+                      <div class="innerContainer">   
+                            <div>
+                              <h3 id="cidade2"><i class="fa fa-location-arrow"></i>Braga</h3>
+                              <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
+                              <p id="temperature2" style="font-size:xxx-large" >37&#176;C</p>
+                            </div>
                         </div>
                       </div>
                   </article>
                 </div>
                 <div class="carousel-item">
-                  <article class="forecast_Santarem">
+                  <article class="tempo_Santarem">
                     <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-                    <div id="iconsContainer">    
-                        <div class = "icons">    
-                            <h3 id="cidade, cidadeNome" onload="GetInfo()">Santarém</h3>
-                            <p class="weather" id="day1"></p>
-                            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                            <p class="maxValues" id="day1Max">Loading...</p>
+                    <div class="container">
+                      <div class="innerContainer">   
+                            <div>
+                              <h3 id="cidade2"><i class="fa fa-location-arrow"></i>Santarém</h3>
+                              <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
+                              <p id="temperature2" style="font-size:xxx-large" >37&#176;C</p>
+                            </div>
                         </div>
                       </div>
                   </article>
@@ -134,23 +140,6 @@
 
     </div>
     
-
-    <script>
-
-      function Toggle1(){
-        
-        var btnvar1 = document.getElementById('btnh1');
-        
-              if (btnvar1.style.color == "red") {
-                  btnvar1.style.color = "grey"
-              }
-              else{
-                  btnvar1.style.color = "red"
-              }
-      }
-
-    </script>
-
     <script src="app.js"></script>
 
     <footer>
@@ -158,7 +147,7 @@
         <div class="left box">
           <h2>Sobre nós</h2>
           <div class="content">
-            <p>Este Website foi criado no intuido das disciplinas de Programação Web - Client e Introdução à Análise e Projeto de Sistemas de Informação.<br>
+            <p>Este Website foi criado no intuido das disciplinas de Programação Web - Cliente e Introdução à Análise e Projeto de Sistemas de Informação.<br>
               O projeto foi realizado por: <br>
               - André Pimenta<br>
               - Diana Catarino<br>

@@ -17,16 +17,14 @@
     <label for="check" class="checkbtn">
       <i class="fas fa-bars"></i>
     </label>
-    <label class="logo">Site</label>
+    <label class="logo">Weather Projeto</label>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="detalhes.html">Detalhes</a></li>
       <li><a href="forecast.html">Forecast</a></li>
       <li><a href="favoritos.html">Favoritos</a></li>
-      <li><a href="#" class="theme">Dark Mode</a></li>
         <input type="text" id="cidade" placeholder="Cidade">
         <button type="submit" id="submit">Pesquisar</button>
-      <li><a href="login.html">Login</a></li>
     </ul>    
   </nav>
 
@@ -34,67 +32,174 @@
     <div class="inicio">
       <div class="detalhes"></div>
           <h2 class="title">Detalhes</h2>
+          <h3 class="tempo_atual">Tempo atual</h3>
+          <div class="location">
+            <h3 class="date">Wednesday 22 July 2020</h3>
+          </div>
   
   </div>
 
-    <div class="detalhes"></div>
+  <div class="detalhes"></div>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
         <article class="detalhes_Leiria">
-            <img src="image" alt="" class="">
-            <h3 class="forecast_dia">Leiria</h3>
-            <p class="vento">Vento:<span class="value">+25</span></p>
-            <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-            <p class="pressao">Pressão:<span class="value">+25</span></p>
-            <p class="humidade">Humidade:<span class="value">+25</span></p>
-            <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+          <button onclick="Toggle1()" id="btnh1" class="btn" onclick="AddToFavorites()"><i class="fa-regular fa-heart"></i></button>
+          <div id="iconsContainer">    
+              <div class = "icons">    
+                  <h3 id="cidade, cidadeNome" onload="showWeatherReport(weather)">Leiria</h3>
+                  <p class="weather" id=""></p>
+                  <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                  <p class="maxValues" id="day1Max">Loading...</p>
+                  <p class="vento">Vento:<span class="value">+25</span></p>
+                  <p class="nuvens">Nuvens:<span class="value">+25</span></p>
+                  <p class="pressao">Pressão:<span class="value">+25</span></p>
+                  <p class="humidade">Humidade:<span class="value">+25</span></p>
+                  <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+              </div>
+            </div>
         </article>
+      </div>
+      <div class="carousel-item">
         <article class="detalhes_Porto">
-          <img src="image" alt="" class="">
-          <h3 class="forecast_dia">Porto</h3>
-          <p class="vento">Vento:<span class="value">+25</span></p>
-          <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-          <p class="pressao">Pressão:<span class="value">+25</span></p>
-          <p class="humidade">Humidade:<span class="value">+25</span></p>
-          <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+          <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+          <div id="iconsContainer">    
+              <div class = "icons">    
+                  <h3 id="cidade, cidadeNome" onload="GetInfo()">Porto</h3>
+                  <p class="weather" id=""></p>
+                  <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                  <p class="maxValues" id="day1Max">Loading...</p>
+                  <p class="vento">Vento:<span class="value">+25</span></p>
+                  <p class="nuvens">Nuvens:<span class="value">+25</span></p>
+                  <p class="pressao">Pressão:<span class="value">+25</span></p>
+                  <p class="humidade">Humidade:<span class="value">+25</span></p>
+                  <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+              </div>
+            </div>
         </article>
+      </div>
+      <div class="carousel-item">
         <article class="detalhes_Faro">
-          <img src="image" alt="" class="">
-          <h3 class="forecast_dia">Faro</h3>
-          <p class="vento">Vento:<span class="value">+25</span></p>
-          <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-          <p class="pressao">Pressão:<span class="value">+25</span></p>
-          <p class="humidade">Humidade:<span class="value">+25</span></p>
-          <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+          <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+          <div id="iconsContainer">    
+              <div class = "icons">    
+                  <h3 id="cidade, cidadeNome" onload="GetInfo()">Faro</h3>
+                  <p class="weather" id=""></p>
+                  <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                  <p class="maxValues" id="day1Max">Loading...</p>
+                  <p class="vento">Vento:<span class="value">+25</span></p>
+                  <p class="nuvens">Nuvens:<span class="value">+25</span></p>
+                  <p class="pressao">Pressão:<span class="value">+25</span></p>
+                  <p class="humidade">Humidade:<span class="value">+25</span></p>
+                  <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+              </div>
+            </div>
         </article>
+      </div>
+      <div class="carousel-item">
         <article class="detalhes_Lisboa">
-          <img src="image" alt="" class="">
-          <h3 class="forecast_dia">Lisboa</h3>
-          <p class="vento">Vento:<span class="value">+25</span></p>
-          <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-          <p class="pressao">Pressão:<span class="value">+25</span></p>
-          <p class="humidade">Humidade:<span class="value">+25</span></p>
-          <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+          <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+          <div id="iconsContainer">    
+              <div class = "icons">    
+                  <h3 id="cidade, cidadeNome" onload="GetInfo()">Lisboa</h3>
+                  <p class="weather" id=""></p>
+                  <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                  <p class="maxValues" id="day1Max">Loading...</p>
+                  <p class="vento">Vento:<span class="value">+25</span></p>
+                  <p class="nuvens">Nuvens:<span class="value">+25</span></p>
+                  <p class="pressao">Pressão:<span class="value">+25</span></p>
+                  <p class="humidade">Humidade:<span class="value">+25</span></p>
+                  <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+              </div>
+            </div>
         </article>
+      </div>
+      <div class="carousel-item">
         <article class="detalhes_Braga">
-          <img src="image" alt="" class="">
-          <h3 class="forecast_dia">Braga</h3>
-          <p class="vento">Vento:<span class="value">+25</span></p>
-          <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-          <p class="pressao">Pressão:<span class="value">+25</span></p>
-          <p class="humidade">Humidade:<span class="value">+25</span></p>
-          <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+          <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+          <div id="iconsContainer">    
+              <div class = "icons">    
+                  <h3 id="cidade, cidadeNome" onload="GetInfo()">Braga</h3>
+                  <p class="weather" id=""></p>
+                  <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                  <p class="maxValues" id="day1Max">Loading...</p>
+                  <p class="vento">Vento:<span class="value">+25</span></p>
+                  <p class="nuvens">Nuvens:<span class="value">+25</span></p>
+                  <p class="pressao">Pressão:<span class="value">+25</span></p>
+                  <p class="humidade">Humidade:<span class="value">+25</span></p>
+                  <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+              </div>
+            </div>
         </article>
+      </div>
+      <div class="carousel-item">
         <article class="detalhes_Santarem">
-          <img src="image" alt="" class="">
-          <h3 class="forecast_dia">Santarém</h3>
-          <p class="vento">Vento:<span class="value">+25</span></p>
-          <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-          <p class="pressao">Pressão:<span class="value">+25</span></p>
-          <p class="humidade">Humidade:<span class="value">+25</span></p>
-          <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+          <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+          <div id="iconsContainer">    
+              <div class = "icons">    
+                  <h3 id="cidade, cidadeNome" onload="GetInfo()">Santarém</h3>
+                  <p class="weather" id=""></p>
+                  <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+                  <p class="maxValues" id="day1Max">Loading...</p>
+                  <p class="vento">Vento:<span class="value">+25</span></p>
+                  <p class="nuvens">Nuvens:<span class="value">+25</span></p>
+                  <p class="pressao">Pressão:<span class="value">+25</span></p>
+                  <p class="humidade">Humidade:<span class="value">+25</span></p>
+                  <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+              </div>
+            </div>
         </article>
+      </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
+</div>
+
     <script src="app.js"></script>
+
+    <footer>
+      <div class="main-content">
+        <div class="left box">
+          <h2>Sobre nós</h2>
+          <div class="content">
+            <p>Este Website foi criado no intuido das disciplinas de Programação Web - Cliente e Introdução à Análise e Projeto de Sistemas de Informação.<br>
+              O projeto foi realizado por: <br>
+              - André Pimenta<br>
+              - Diana Catarino<br>
+              - Diogo Luís <br>
+            </p>
+        </div>  
+        </div>
+
+        <div class="right box">
+          <h2>Suporte</h2>
+          <div class="content">
+            <form action="#">
+              <div class="email">
+                <div class="text">Email *</div>
+                <input type="email" required>
+              </div>
+              <div class="msg">
+                <div class="text">Mensagem *</div>
+                <textarea rows="2" cols="25" required></textarea>
+              </div>
+              <div class="btn">
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 </body>
 </html>

@@ -17,24 +17,26 @@
     <label for="check" class="checkbtn">
       <i class="fas fa-bars"></i>
     </label>
-    <label class="logo">Site</label>
+    <label class="logo">Weather Projeto</label>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="detalhes.html">Detalhes</a></li>
       <li><a href="forecast.html">Forecast</a></li>
       <li><a href="favoritos.html">Favoritos</a></li>
-      <li><a href="#" class="theme">Dark Mode</a></li>
-        <input type="text" id="cidade" placeholder="Cidade">
-        <button type="button" onclick="GetInfo()">Pesquisar</button>  
-      <li><a href="login.html">Login</a></li>      
+        <input type="text" id="cityInput" placeholder="Cidade">
+        <button type="button" onclick="GetInfo()">Pesquisar</button>        
     </ul>    
   </nav>
   
   <div class="tempo">
     <div class="inicio">
       <div class="detalhes"></div>
-      <h2 class="title">Previsão para os próximos 5 dias / 3 horas</h2>
-      <h2 id="cidadeNome">Leiria</h2>
+      <h2 class="title">Forecast 5d/3h</h2>
+      <div class="location">
+        <h2 id="cityName">Leiria</h2>
+        <h3 class="date">Wednesday 22 July 2020</h3>
+      </div>
+      
       <div id = "weatherContainer">
       <article class="dia1">
         <div id="iconsContainer">    
@@ -88,7 +90,7 @@
         <div class="left box">
           <h2>Sobre nós</h2>
           <div class="content">
-            <p>Este Website foi criado no intuido das disciplinas de Programação Web - Client e Introdução à Análise e Projeto de Sistemas de Informação.<br>
+            <p>Este Website foi criado no intuido das disciplinas de Programação Web - Cliente e Introdução à Análise e Projeto de Sistemas de Informação.<br>
               O projeto foi realizado por: <br>
               - André Pimenta<br>
               - Diana Catarino<br>
@@ -106,7 +108,7 @@
                 <input type="email" required>
               </div>
               <div class="msg">
-                <div class="text">Mensagem *</div>
+                <div class="text">Message *</div>
                 <textarea rows="2" cols="25" required></textarea>
               </div>
               <div class="btn">
