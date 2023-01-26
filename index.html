@@ -6,10 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=16e9f5fc4cdfb21605bdee8fe57b7ea2"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script
+    src="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=16e9f5fc4cdfb21605bdee8fe57b7ea2"></script>
   <script src="https://kit.fontawesome.com/af59d488f2.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </head>
 
 <body>
@@ -24,158 +29,127 @@
       <li><a href="detalhes.html">Detalhes</a></li>
       <li><a href="forecast.html">Forecast</a></li>
       <li><a href="favoritos.html">Favoritos</a></li>
-      <li></li><input type="text" id="cidade" placeholder="Cidade">
-        <button type="submit" id="submit">Pesquisar</button></li>
-    </ul>    
+      <input type="text" id="cidade" placeholder="Cidade">
+      <button type="submit" id="submit">Pesquisar</button>
+    </ul>
   </nav>
   
-  
-    <div class="tempo">
-      <div class="inicio">
-        <div class="detalhes"></div>
-            <h2 class="title">Bem-vindo</h2>
-            <h3 class="tempo_atual">Tempo atual</h3>
-            <div class="location">
-              <h3 class="date">Quarta 22 Julho 2020</h3>
-            </div>
+<div class="tempo">
+    <div class="inicio">
+      <div class="detalhes"></div>
+      <h2 class="title">Bem-vindo</h2>
+      <h3 class="tempo_atual">Tempo atual</h3>
+  </div>
 
-            <div class="forecast"></div>
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <article class="tempo_Leiria">
-                    <button onclick="Toggle1()" id="btnh1" class="btn" onclick="AddToFavorites()"><i class="fa-regular fa-heart"></i></button>
-                    <div class="container">
-                      <div class="innerContainer">   
-                            <div>
-                              <h3 id="cidade1"><i class="fa fa-location-arrow"></i>Leiria</h3>
-                              <img id="icon1" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
-                              <p class="temperature.value" style="font-size:xxx-large" >37&#176;C</p>
-                            </div>
-                        </div>
-                      </div>
-                  </article>
-                </div>
-                <div class="carousel-item">
-                  <article class="tempo_Porto">
-                    <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-                    <div class="container">
-                      <div class="innerContainer">   
-                            <div>
-                              <h3 id="cidade2"><i class="fa fa-location-arrow"></i>Porto</h3>
-                              <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
-                              <p id="temperature2" style="font-size:xxx-large" >37&#176;C</p>
-                            </div>
-                        </div>
-                      </div>
-                  </article>
-                </div>
-                <div class="carousel-item">
-                  <article class="tempo_Faro">
-                    <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-                    <div class="container">
-                      <div class="innerContainer">   
-                            <div>
-                              <h3 id="cidade2"><i class="fa fa-location-arrow"></i>Faro</h3>
-                              <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
-                              <p id="temperature2" style="font-size:xxx-large" >37&#176;C</p>
-                            </div>
-                        </div>
-                      </div>
-                  </article>
-                </div>
-                <div class="carousel-item">
-                  <article class="tempo_Lisboa">
-                    <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-                    <div class="container">
-                      <div class="innerContainer">   
-                            <div>
-                              <h3 id="cidade2"><i class="fa fa-location-arrow"></i>Lisboa</h3>
-                              <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
-                              <p id="temperature2" style="font-size:xxx-large" >37&#176;C</p>
-                            </div>
-                        </div>
-                      </div>
-                  </article>
-                </div>
-                <div class="carousel-item">
-                  <article class="tempo_Braga">
-                    <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-                    <div class="container">
-                      <div class="innerContainer">   
-                            <div>
-                              <h3 id="cidade2"><i class="fa fa-location-arrow"></i>Braga</h3>
-                              <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
-                              <p id="temperature2" style="font-size:xxx-large" >37&#176;C</p>
-                            </div>
-                        </div>
-                      </div>
-                  </article>
-                </div>
-                <div class="carousel-item">
-                  <article class="tempo_Santarem">
-                    <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-                    <div class="container">
-                      <div class="innerContainer">   
-                            <div>
-                              <h3 id="cidade2"><i class="fa fa-location-arrow"></i>Santarém</h3>
-                              <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"/>
-                              <p id="temperature2" style="font-size:xxx-large" >37&#176;C</p>
-                            </div>
-                        </div>
-                      </div>
-                  </article>
-                </div>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <article class="tempo_Leiria">
+              <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+              <div class="container">
+                <div class="innerContainer">
+                  <div>
+                    <h3 id="location1"><i class="fa fa-location-arrow"></i>Leiria</h3>
+                    <p id="date1">Sexta 27 Janeiro 2023</p>
+                    <img id="icon1" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                    <p id="temperature1" style="font-size:xxx-large">37&#176;C</p>
+                  </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-
-    </div>
-    
-    <script src="app.js"></script>
-
-    <footer>
-      <div class="main-content">
-        <div class="left box">
-          <h2>Sobre nós</h2>
-          <div class="content">
-            <p>Este Website foi criado no intuido das disciplinas de Programação Web - Cliente e Introdução à Análise e Projeto de Sistemas de Informação.<br>
-              O projeto foi realizado por: <br>
-              - André Pimenta<br>
-              - Diana Catarino<br>
-              - Diogo Luís <br>
-            </p>
-        </div>  
-        </div>
-
-        <div class="right box">
-          <h2>Suporte</h2>
-          <div class="content">
-            <form action="#">
-              <div class="email">
-                <div class="text">Email *</div>
-                <input type="email" required>
+            </article>
+          </div>
+          <div class="carousel-item">
+            <article class="tempo_Porto">
+              <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+              <div class="container">
+                <div class="innerContainer">
+                  <div>
+                    <h3 id="location2"><i class="fa fa-location-arrow"></i>Porto</h3>
+                    <p id="date2">Sexta 27 Janeiro 2023</p>
+                    <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                    <p id="temperature2" style="font-size:xxx-large">37&#176;C</p>
+                  </div>
+                </div>
               </div>
-              <div class="msg">
-                <div class="text">Mensagem *</div>
-                <textarea rows="2" cols="25" required></textarea>
+            </article>
+          </div>
+          <div class="carousel-item">
+            <article class="tempo_Faro">
+              <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+              <div class="container">
+                <div class="innerContainer">
+                  <div>
+                    <h3 id="location3"><i class="fa fa-location-arrow"></i>Faro</h3>
+                    <p id="date3">Sexta 27 Janeiro 2023</p>
+                    <img id="icon3" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                    <p id="temperature3" style="font-size:xxx-large">37&#176;C</p>
+                  </div>
+                </div>
               </div>
-              <div class="btn">
-                <button type="submit">Send</button>
+            </article>
+          </div>
+          <div class="carousel-item">
+            <article class="tempo_Lisboa">
+              <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+              <div class="container">
+                <div class="innerContainer">
+                  <div>
+                    <h3 id="location4"><i class="fa fa-location-arrow"></i>Lisboa</h3>
+                    <p id="date4">Sexta 27 Janeiro 2023</p>
+                    <img id="icon4" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                    <p id="temperature4" style="font-size:xxx-large">37&#176;C</p>
+                  </div>
+                </div>
               </div>
-            </form>
+            </article>
+          </div>
+          <div class="carousel-item">
+            <article class="tempo_Braga">
+              <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+              <div class="container">
+                <div class="innerContainer">
+                  <div>
+                    <h3 id="location5"><i class="fa fa-location-arrow"></i>Braga</h3>
+                    <p id="date5">Sexta 27 Janeiro 2023</p>
+                    <img id="icon5" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                    <p id="temperature5" style="font-size:xxx-large">37&#176;C</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="carousel-item">
+            <article class="tempo_Coimbra">
+              <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+              <div class="container">
+                <div class="innerContainer">
+                  <div>
+                    <h3 id="location6"><i class="fa fa-location-arrow"></i>Coimbra</h3>
+                    <p id="date6">Sexta 27 Janeiro 2023</p>
+                    <img id="icon6" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                    <p id="temperature6" style="font-size:xxx-large">37&#176;C</p>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </div>
-    </footer>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
 
 </body>
+
 </html>

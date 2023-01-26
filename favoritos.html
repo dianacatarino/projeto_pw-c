@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=16e9f5fc4cdfb21605bdee8fe57b7ea2"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script
+    src="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=16e9f5fc4cdfb21605bdee8fe57b7ea2"></script>
 </head>
 
 <body>
@@ -23,63 +27,69 @@
       <li><a href="detalhes.html">Detalhes</a></li>
       <li><a href="forecast.html">Forecast</a></li>
       <li><a href="favoritos.html">Favoritos</a></li>
-        <input type="text" id="cidade" placeholder="Cidade">
-        <button type="submit" id="submit">Pesquisar</button>
-    </ul>    
+      <input type="text" id="cidade" placeholder="Cidade">
+      <button type="submit" id="submit">Pesquisar</button>
+    </ul>
   </nav>
-  
-    <div class="tempo">
-      <div class="inicio">
-        <div class="detalhes"></div>
-            <h2 class="title">Favoritos</h2>
-            <p class="description">Aqui pode encontrar as suas cidades favoritas</p>
 
-          <article class="favoritos">
-            
-              <li><p>Leiria</p></li><button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-              <li><p>Lisboa</p></li><button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-          </article>
+  <div class="tempo">
+    <div class="inicio">
+      <div class="detalhes"></div>
+      <h2 class="title">Favoritos</h2>
+      <p class="description">Aqui pode encontrar as suas cidades favoritas</p>
+
+      <article class="favoritos">
+
+        <li>
+          <p>Leiria</p>
+        </li><button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+        <li>
+          <p>Lisboa</p>
+        </li><button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+      </article>
+    </div>
+  </div>
+  </div>
+
+
+  <script src="app.js"></script>
+
+  <footer>
+    <div class="main-content">
+      <div class="left box">
+        <h2>Sobre nós</h2>
+        <div class="content">
+          <p>Este Website foi criado no intuido das disciplinas de Programação Web - Cliente e Introdução à Análise e
+            Projeto de Sistemas de Informação.<br>
+            O projeto foi realizado por: <br>
+            - André Pimenta<br>
+            - Diana Catarino<br>
+            - Diogo Luís <br>
+          </p>
+        </div>
+      </div>
+
+      <div class="right box">
+        <h2>Suporte</h2>
+        <div class="content">
+          <form action="#">
+            <div class="email">
+              <div class="text">Email *</div>
+              <input type="email" required>
+            </div>
+            <div class="msg">
+              <div class="text">Mensagem *</div>
+              <textarea rows="2" cols="25" required></textarea>
+            </div>
+            <div class="btn">
+              <button type="submit">Send</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-
-
-    <script src="app.js"></script>
-
-    <footer>
-      <div class="main-content">
-        <div class="left box">
-          <h2>Sobre nós</h2>
-          <div class="content">
-            <p>Este Website foi criado no intuido das disciplinas de Programação Web - Cliente e Introdução à Análise e Projeto de Sistemas de Informação.<br>
-              O projeto foi realizado por: <br>
-              - André Pimenta<br>
-              - Diana Catarino<br>
-              - Diogo Luís <br>
-            </p>
-        </div>  
-        </div>
-
-        <div class="right box">
-          <h2>Suporte</h2>
-          <div class="content">
-            <form action="#">
-              <div class="email">
-                <div class="text">Email *</div>
-                <input type="email" required>
-              </div>
-              <div class="msg">
-                <div class="text">Mensagem *</div>
-                <textarea rows="2" cols="25" required></textarea>
-              </div>
-              <div class="btn">
-                <button type="submit">Send</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </footer>
+  </footer>
 
 </body>
+
 </html>

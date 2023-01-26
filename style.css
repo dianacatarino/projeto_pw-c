@@ -1,220 +1,246 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    height: 120vh;
-    margin: 0;
-    background-image: radial-gradient(circle, #1c7fc2 0%, #009cdc 28%, #0d9ade 32%, #011844);
-    color: #fff;
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 300;
-    font-size: 22px;
+  width: 100%;
+  height: 120vh;
+  margin: 0;
+  background-image: radial-gradient(circle, #1c7fc2 0%, #009cdc 28%, #0d9ade 32%, #011844);
+  color: #fff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 22px;
 }
 
-p, h2, h3, .value, .temperatura, textarea,i{
-  color:white;
+p, h2, h3, .value, .temperatura,
+textarea, i, .location1 {
+  color: white;
 }
 
-input{
+input {
   color: #000;
 }
 
-.tempo_atual{
+.tempo_atual {
   text-align: center;
 }
 
 .carousel-item {
-    text-align: center !important;
-    margin: auto;
+  text-align: center !important;
+  margin: auto;
 }
 
 .tempo {
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 20px 0;
-    box-sizing: border-box;
-    white-space: nowrap;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .procurar {
+  width: 100%;
+  padding: 15px 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0, 15);
+  font-size: 20px;
+  color: inherit;
+}
+
+.procurar::placeholder {
+  color: #fff;
+}
+
+.tempo_atual {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.imagem_tempo {
+  width: 30vmin;
+  align-self: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 20px 0;
+  color: white;
+}
+
+.dia {
+  font-size: 30px;
+  margin: 10px 0;
+  color: white;
+}
+
+.forecast {
+  font-size: 30px;
+}
+
+#cityName {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+}
+
+nav {
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: #1b9bff;
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
     width: 100%;
-    padding: 15px 10px;
-    border: none;
-    background-color: rgba(255,255,255,0,15);
-    font-size: 20px;
-    color: inherit;
-}
-
-.procurar::placeholder{
-    color:#fff;
-}
-
-.tempo_atual{
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.imagem_tempo{
-    width: 30vmin;
-    align-self: center;
-}
-
-.title{
-    font-size: 36px;
-    font-weight: 600;
-    margin: 20px 0;
-    color: white;
-}
-
-.dia{
-    font-size: 30px;
-    margin: 10px 0;
-    color: white;
-}
-
-.forecast{
-    font-size: 30px;
-}
-
-#cityName{
-    font-size: 30px;
-    font-weight: 600;
-    margin: 10px 0;
-    color: white;
-}
-
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-  }
-  body{
-    font-family: montserrat;
-  }
-  nav{
-    background: #0082e6;
-    height: 80px;
-    width: 100%;
-  }
-  label.logo{
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
-  }
-  nav ul{
-    float: right;
-    margin-right: 20px;
-  }
-  nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-  }
-  nav ul li a{
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-  }
-  a.active,a:hover{
-    background: #1b9bff;
-    transition: .5s;
-  }
-  .checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-  }
-  #check{
-    display: none;
-  }
-  @media (max-width: 952px){
-    label.logo{
-      font-size: 30px;
-      padding-left: 50px;
-    }
-    nav ul li a{
-      font-size: 16px;
-    }
-  }
-  @media (max-width: 858px){
-    .checkbtn{
-      display: block;
-    }
-    ul{
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: #2c3e50;
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all .5s;
-    }
-    nav ul li{
-      display: block;
-      margin: 50px 0;
-      line-height: 15px;
-    }
-    nav ul li a{
-      font-size: 15px;
-    }
-    a:hover,a.active{
-      background: none;
-      color: #0082e6;
-    }
-    #check:checked ~ ul{
-      left: 0;
-    }
-  }
-  section{
-    background: url(bg1.jpg) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
-  }
-
-  input{
-    background: rgb(255, 255, 255);
-    border: 0;
-    border-radius: 20px;
-    padding: 5px 6px;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
     text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 15px;
+  }
+
+  nav ul li a {
+    font-size: 15px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
+section {
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+
+input {
+  background: rgb(255, 255, 255);
+  border: 0;
+  border-radius: 20px;
+  padding: 5px 6px;
+  text-align: center;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   color: #151515;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-.content1{
+
+.content1 {
   position: relative;
   margin: 130px auto;
   text-align: center;
   padding: 0 20px;
 }
-.content1 .text{
+
+.content1 .text {
   font-size: 2.5rem;
   font-weight: 600;
   color: #202020;
 }
-.content1 .p{
+
+.content1 .p {
   font-size: 2.1875rem;
   font-weight: 600;
   color: #202020;
@@ -225,27 +251,31 @@ input{
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 60px; 
+  height: 60px;
   background: rgb(0, 0, 0);
 }
 
-.main-content{
+.main-content {
   display: flex;
 }
-.main-content .box{
+
+.main-content .box {
   flex-basis: 50%;
   padding: 10px 20px;
 }
-.box h2{
+
+.box h2 {
   font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
 }
-.box .content{
+
+.box .content {
   margin: 20px 0 0 0;
   position: relative;
 }
-.box .content:before{
+
+.box .content:before {
   position: absolute;
   content: '';
   top: -10px;
@@ -253,7 +283,8 @@ input{
   width: 100%;
   background: #1a1a1a;
 }
-.box .content:after{
+
+.box .content:after {
   position: absolute;
   content: '';
   height: 2px;
@@ -261,36 +292,44 @@ input{
   background: #2472e7;
   top: -10px;
 }
-.left .content p{
+
+.left .content p {
   text-align: justify;
 }
 
-.right form .text{
+.right form .text {
   font-size: 1.0625rem;
   margin-bottom: 2px;
   color: #fbfbfb;
 }
-.right form .msg{
+
+.right form .msg {
   margin-top: 10px;
 }
-.right form input, .right form textarea{
+
+.right form input,
+.right form textarea {
   width: 100%;
   font-size: 1.0625rem;
   background: #151515;
   padding-left: 10px;
   border: 1px solid #222222;
 }
+
 .right form input:focus,
-.right form textarea:focus{
+.right form textarea:focus {
   outline-color: #3498db;
 }
-.right form input{
+
+.right form input {
   height: 35px;
 }
-.right form .btn{
+
+.right form .btn {
   margin-top: 10px;
 }
-.right form .btn button{
+
+.right form .btn button {
   height: 40px;
   width: 100%;
   border: none;
@@ -301,34 +340,42 @@ input{
   cursor: pointer;
   transition: .3s;
 }
-.right form .btn button:hover{
+
+.right form .btn button:hover {
   background: #000;
 }
-.bottom center{
+
+.bottom center {
   padding: 5px;
   font-size: 0.9375rem;
   background: #151515;
 }
-.bottom center span{
+
+.bottom center span {
   color: #656565;
 }
-.bottom center a{
+
+.bottom center a {
   color: #2074f1;
   text-decoration: none;
 }
-.bottom center a:hover{
+
+.bottom center a:hover {
   text-decoration: underline;
 }
+
 @media screen and (max-width: 900px) {
-  footer{
+  footer {
     position: relative;
     bottom: 0px;
   }
-  .main-content{
+
+  .main-content {
     flex-wrap: wrap;
     flex-direction: column;
   }
-  .main-content .box{
+
+  .main-content .box {
     margin: 5px 0;
   }
 }
@@ -343,55 +390,7 @@ article {
   text-align: center !important;
 }
 
-.forecast_Porto {
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  height: 220px !important;
-  display: inline-block;
-}
-
-.forecast_Leiria {
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  height: 220px !important;
-  display: inline-block;
-}
-
-.forecast_Faro {
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  height: 220px !important;
-  display: inline-block;
-}
-
-.forecast_Braga {
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  height: 220px !important;
-  display: inline-block;
-}
-
-.forecast_Lisboa {
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  height: 220px !important;
-  display: inline-block;
-}
-
-.forecast_Santarem {
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  height: 220px !important;
-  display: inline-block;
-}
-
-.detalhes_Leiria,.detalhes_Porto,.detalhes_Lisboa,.detalhes_Braga,.detalhes_Santarem,.detalhes_Faro{
+.detalhes_Leiria,.detalhes_Porto,.detalhes_Lisboa,.detalhes_Braga,.detalhes_Coimbra,.detalhes_Faro {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -399,11 +398,11 @@ article {
   display: inline-block;
 }
 
-.tempo_Leiria,.tempo_Porto,.tempo_Lisboa,.tempo_Braga,.tempo_Santarem,.tempo_Faro{
+.tempo_Leiria,.tempo_Porto,.tempo_Lisboa,.tempo_Braga,.tempo_Coimbra,.tempo_Faro {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  height: 320px !important;
+  height: 350px !important;
   display: inline-block;
 }
 
@@ -458,50 +457,50 @@ article {
   text-align: center;
 }
 
-.favoritos{
+.favoritos {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  height: 500px !important;
-  width: 500px !important;
+  height: auto !important;
+  width: auto !important;
   display: inline-block;
 }
 
-.btns{
+.btns {
   position: absolute;
   top: 4px;
   left: 200px;
   display: flex;
 }
 
-.btn{
+.btn {
   background-color: transparent;
   border: none;
   margin: 2px;
   margin-left: 200px;
   font-size: 12px;
   outline: none;
-  color:white;
+  color: white;
 }
 
-.btn i:hover{
+.btn i:hover {
   cursor: pointer;
 }
 
-.carousel-item{
+.carousel-item {
   text-align: center;
   height: 400px !important;
   display: inline-block;
 }
 
-.carousel-control-prev{
+.carousel-control-prev {
   margin: 450px;
   margin-left: 10px;
   font-size: 12px;
   height: 10px;
 }
 
-.carousel-control-next{
+.carousel-control-next {
   margin: 450px;
   margin-right: 100px;
   font-size: 12px;
