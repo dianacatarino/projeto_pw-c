@@ -14,8 +14,12 @@ body {
     font-size: 22px;
 }
 
-p, h2, h3, .value, .temperatura, textarea,i,input{
+p, h2, h3, .value, .temperatura, textarea,i{
   color:white;
+}
+
+input{
+  color: #000;
 }
 
 .tempo_atual{
@@ -488,4 +492,18 @@ article {
   text-align: center;
   height: 400px !important;
   display: inline-block;
+}
+
+.carousel-control-prev{
+  margin: 450px;
+  margin-left: 10px;
+  font-size: 12px;
+  height: 10px;
+}
+
+.carousel-control-next{
+  margin: 450px;
+  margin-right: 100px;
+  font-size: 12px;
+  height: 10px;
 }
