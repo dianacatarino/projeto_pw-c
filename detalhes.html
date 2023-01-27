@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 
+<!--Importações de css e javascript-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather</title>
+  <title>Detalhes</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script
-    src="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=16e9f5fc4cdfb21605bdee8fe57b7ea2"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=16e9f5fc4cdfb21605bdee8fe57b7ea2"></script>
+  <script src="https://kit.fontawesome.com/af59d488f2.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </head>
 
+<!--Corpo da página-->
 <body>
+  <!--Navbar-->
   <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
@@ -40,24 +41,23 @@
 
     </div>
 
-    <div class="detalhes"></div>
+    <!--Detalhes das 6 cidades-->
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <article class="detalhes_Leiria">
-            <button onclick="Toggle1()" id="btnh1" class="btn" onclick="AddToFavorites()"><i
-                class="fa-regular fa-heart"></i></button>
-            <div id="iconsContainer">
-              <div class="icons">
-                <h3 id="cidade, cidadeNome" onload="showWeatherReport(weather)">Leiria</h3>
-                <p class="weather" id=""></p>
-                <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                <p class="maxValues" id="day1Max">Loading...</p>
-                <p class="vento">Vento:<span class="value">+25</span></p>
-                <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-                <p class="pressao">Pressão:<span class="value">+25</span></p>
-                <p class="humidade">Humidade:<span class="value">+25</span></p>
-                <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+            <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
+            <div class="container">
+              <div class="innerContainer">
+                <div>
+                  <h3 id="location1"><i class="fa fa-location-arrow"></i>Leiria</h3>
+                  <p id="date1">Sexta 27 Janeiro 2023</p>
+                  <img id="icon1" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                  <p id="humidity1">Humidade: 60%</p>
+                  <p id="pressure1">Pressão: 0 hpA</p>
+                  <p id="coords1">Coordenadas:</p>
+                  <p id="windspeed1">Velocidade do vento: 6.2 km/h</p>
+                </div>
               </div>
             </div>
           </article>
@@ -65,17 +65,17 @@
         <div class="carousel-item">
           <article class="detalhes_Porto">
             <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-            <div id="iconsContainer">
-              <div class="icons">
-                <h3 id="cidade, cidadeNome" onload="GetInfo()">Porto</h3>
-                <p class="weather" id=""></p>
-                <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                <p class="maxValues" id="day1Max">Loading...</p>
-                <p class="vento">Vento:<span class="value">+25</span></p>
-                <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-                <p class="pressao">Pressão:<span class="value">+25</span></p>
-                <p class="humidade">Humidade:<span class="value">+25</span></p>
-                <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+            <div class="container">
+              <div class="innerContainer">
+                <div>
+                  <h3 id="location2"><i class="fa fa-location-arrow"></i>Porto</h3>
+                  <p id="date2">Sexta 27 Janeiro 2023</p>
+                  <img id="icon2" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                  <p id="humidity2">Humidade: 60%</p>
+                  <p id="pressure2">Pressão: 0 hpA</p>
+                  <p id="coords2">Coordenadas:</p>
+                  <p id="windspeed2">Velocidade do vento: 6.2 km/h</p>
+                </div>
               </div>
             </div>
           </article>
@@ -83,17 +83,17 @@
         <div class="carousel-item">
           <article class="detalhes_Faro">
             <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-            <div id="iconsContainer">
-              <div class="icons">
-                <h3 id="cidade, cidadeNome" onload="GetInfo()">Faro</h3>
-                <p class="weather" id=""></p>
-                <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                <p class="maxValues" id="day1Max">Loading...</p>
-                <p class="vento">Vento:<span class="value">+25</span></p>
-                <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-                <p class="pressao">Pressão:<span class="value">+25</span></p>
-                <p class="humidade">Humidade:<span class="value">+25</span></p>
-                <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+            <div class="container">
+              <div class="innerContainer">
+                <div>
+                  <h3 id="location3"><i class="fa fa-location-arrow"></i>Faro</h3>
+                  <p id="date3">Sexta 27 Janeiro 2023</p>
+                  <img id="icon3" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                  <p id="humidity3">Humidade: 60%</p>
+                  <p id="pressure3">Pressão: 0 hpA</p>
+                  <p id="coords3">Coordenadas:</p>
+                  <p id="windspeed3">Velocidade do vento: 6.2 km/h</p>
+                </div>
               </div>
             </div>
           </article>
@@ -101,17 +101,17 @@
         <div class="carousel-item">
           <article class="detalhes_Lisboa">
             <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-            <div id="iconsContainer">
-              <div class="icons">
-                <h3 id="cidade, cidadeNome" onload="GetInfo()">Lisboa</h3>
-                <p class="weather" id=""></p>
-                <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                <p class="maxValues" id="day1Max">Loading...</p>
-                <p class="vento">Vento:<span class="value">+25</span></p>
-                <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-                <p class="pressao">Pressão:<span class="value">+25</span></p>
-                <p class="humidade">Humidade:<span class="value">+25</span></p>
-                <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+            <div class="container">
+              <div class="innerContainer">
+                <div>
+                  <h3 id="location4"><i class="fa fa-location-arrow"></i>Lisboa</h3>
+                  <p id="date4">Sexta 27 Janeiro 2023</p>
+                  <img id="icon4" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                  <p id="humidity4">Humidade: 60%</p>
+                  <p id="pressure4">Pressão: 0 hpA</p>
+                  <p id="coords4">Coordenadas:</p>
+                  <p id="windspeed4">Velocidade do vento: 6.2 km/h</p>
+                </div>
               </div>
             </div>
           </article>
@@ -119,17 +119,17 @@
         <div class="carousel-item">
           <article class="detalhes_Braga">
             <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-            <div id="iconsContainer">
-              <div class="icons">
-                <h3 id="cidade, cidadeNome" onload="GetInfo()">Braga</h3>
-                <p class="weather" id=""></p>
-                <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                <p class="maxValues" id="day1Max">Loading...</p>
-                <p class="vento">Vento:<span class="value">+25</span></p>
-                <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-                <p class="pressao">Pressão:<span class="value">+25</span></p>
-                <p class="humidade">Humidade:<span class="value">+25</span></p>
-                <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+            <div class="container">
+              <div class="innerContainer">
+                <div>
+                  <h3 id="location5"><i class="fa fa-location-arrow"></i>Braga</h3>
+                  <p id="date5">Sexta 27 Janeiro 2023</p>
+                  <img id="icon5" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                  <p id="humidity5">Humidade: 60%</p>
+                  <p id="pressure5">Pressão: 0 hpA</p>
+                  <p id="coords5">Coordenadas:</p>
+                  <p id="windspeed5">Velocidade do vento: 6.2 km/h</p>
+                </div>
               </div>
             </div>
           </article>
@@ -137,28 +137,30 @@
         <div class="carousel-item">
           <article class="detalhes_Coimbra">
             <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fa-regular fa-heart"></i></button>
-            <div id="iconsContainer">
-              <div class="icons">
-                <h3 id="cidade, cidadeNome" onload="GetInfo()">Coimbra</h3>
-                <p class="weather" id=""></p>
-                <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
-                <p class="maxValues" id="day1Max">Loading...</p>
-                <p class="vento">Vento:<span class="value">+25</span></p>
-                <p class="nuvens">Nuvens:<span class="value">+25</span></p>
-                <p class="pressao">Pressão:<span class="value">+25</span></p>
-                <p class="humidade">Humidade:<span class="value">+25</span></p>
-                <p class="coordenadas">Coordenadas:<span class="value">+25</span></p>
+            <div class="container">
+              <div class="innerContainer">
+                <div>
+                  <h3 id="location6"><i class="fa fa-location-arrow"></i>Coimbra</h3>
+                  <p id="date6">Sexta 27 Janeiro 2023</p>
+                  <img id="icon6" src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" />
+                  <p id="humidity6">Humidade: 60%</p>
+                  <p id="pressure6">Pressão: 0 hpA</p>
+                  <p id="coords6">Coordenadas:</p>
+                  <p id="windspeed6">Velocidade do vento: 6.2 km/h</p>
+                </div>
               </div>
             </div>
           </article>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+      data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
@@ -166,8 +168,7 @@
 
   </div>
 
-  <script src="app.js"></script>
-
+  <!--Footer-->
   <footer>
     <div class="main-content">
       <div class="left box">
@@ -196,7 +197,7 @@
               <textarea rows="2" cols="25" required></textarea>
             </div>
             <div class="btn">
-              <button type="submit">Send</button>
+              <button type="submit">Enviar</button>
             </div>
           </form>
         </div>

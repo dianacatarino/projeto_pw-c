@@ -394,7 +394,7 @@ article {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  height: 370px !important;
+  height: 430px !important;
   display: inline-block;
 }
 
@@ -405,7 +405,6 @@ article {
   height: 350px !important;
   display: inline-block;
 }
-
 
 .dia1 {
   border-radius: 5px;
@@ -489,7 +488,7 @@ article {
 
 .carousel-item {
   text-align: center;
-  height: 400px !important;
+  height: 450px !important;
   display: inline-block;
 }
 
